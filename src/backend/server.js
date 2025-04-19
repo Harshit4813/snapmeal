@@ -11,7 +11,12 @@ app.use(cors());
 app.use(express.json());
 
 // Serve static files from React build
-app.use(express.static(path.join(__dirname, '../../client/build')));
+app.use(express.static(path.join(__dirname, '../../snapmeal/build')));
+
+// Update catch-all route
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../snapmeal/build/index.html'));
+});
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI)
