@@ -4,9 +4,7 @@
   "scripts": {
     "start": "node src/backend/server.js",
     "dev": "nodemon src/backend/server.js",
-    "install-client": "cd snapmeal && npm install",
-    "client-build": "cd snapmeal && npm run build",
-    "build": "npm install && npm run install-client && npm run client-build"
+    "build": "cd snapmeal && npm install && npm run build"
   },
   "engines": {
     "node": "16.x"
