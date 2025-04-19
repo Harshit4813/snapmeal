@@ -4,12 +4,10 @@
   "scripts": {
     "start": "node src/backend/server.js",
     "dev": "nodemon src/backend/server.js",
-    "install-deps": "npm install && cd client && npm install",
-    "build": "cd client && npm install && npm run build",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "build": "cd client && npm run build"
   },
   "engines": {
-    "node": ">=14.x"
+    "node": "16.x"
   },
   "dependencies": {
     "bcryptjs": "^3.0.2",
