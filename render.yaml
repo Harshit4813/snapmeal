@@ -2,12 +2,12 @@ services:
   - type: web
     name: snapmeal
     env: node
-    buildCommand: |
-      npm install
-      npm run build
-    startCommand: npm start
+    buildCommand: npm install && npm run build
+    startCommand: NODE_ENV=production npm start
     envVars:
       - key: MONGODB_URI
         value: mongodb+srv://harshitsingh182001:uVG1DPJxjvbojyOD@harshit1.tyamjmn.mongodb.net/?retryWrites=true&w=majority&appName=Harshit1
       - key: JWT_SECRET
         value: snapmeal_secret_key_2024
+      - key: PORT
+        value: "10000"
