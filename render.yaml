@@ -2,7 +2,9 @@ services:
   - type: web
     name: snapmeal
     env: node
-    buildCommand: npm install && cd snapmeal && npm install && npm run build
+    runtime: node
+    nodeVersion: 16.x
+    buildCommand: npm install && cd snapmeal && npm install && npm run build && cd ..
     startCommand: npm start
     envVars:
       - key: MONGODB_URI
